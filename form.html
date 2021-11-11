@@ -1,0 +1,159 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <title>Register Account</title>
+    <!-- Required meta tags -->
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+
+    <!-- Bootstrap CSS -->
+    <link
+      href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/css/bootstrap.min.css"
+      rel="stylesheet"
+      integrity="sha384-EVSTQN3/azprG1Anm3QDgpJLIm9Nao0Yz1ztcQTwFspd3yD65VohhpuuCOmLASjC"
+      crossorigin="anonymous"
+    />
+
+    <!-- Boostrap Icon -->
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.6.1/font/bootstrap-icons.css" />
+
+    <!-- My CSS -->
+    <link rel="stylesheet" href="form.css" />
+
+    <!-- Font CSS -->
+    <link href="https://fonts.googleapis.com/css2?family=Darker+Grotesque&display=swap" rel="stylesheet"
+  </head>
+
+  <body>
+    <!-- Form Login -->
+    <section id="form">
+      <div class="container">
+        <div class="row text-center mb-3">
+          <div class="col mt-5">
+            <h2 style="color: whitesmoke">Free Register Account</h2>
+          </div>
+        </div>
+
+        <div class="row justify-content-center">
+          <div class="col-md-4">
+            <div class="card text-dark bg-light card border-light mb-3" style="max-width: 24rem">
+              <div class="card-header text-center">
+                <a style="text-decoration: none; color: black" href="index.html"><b>Portfolio</b> California</a>
+              </div>
+              <div class="card-body">
+                <!-- <svg xmlns="http://www.w3.org/2000/svg" style="display: none">
+                  <symbol id="exclamation-triangle-fill" fill="currentColor" viewBox="0 0 16 16">
+                    <path
+                      d="M8.982 1.566a1.13 1.13 0 0 0-1.96 0L.165 13.233c-.457.778.091 1.767.98 1.767h13.713c.889 0 1.438-.99.98-1.767L8.982 1.566zM8 5c.535 0 .954.462.9.995l-.35 3.507a.552.552 0 0 1-1.1 0L7.1 5.995A.905.905 0 0 1 8 5zm.002 6a1 1 0 1 1 0 2 1 1 0 0 1 0-2z"
+                    />
+                  </symbol>
+                </svg> -->
+                <div class="mt-2 mb-2"></div>
+                <!-- <div class="alert alert-danger alert-dismissible fade show" role="alert">
+                  <button type="button" class="btn-close" data-bs-dismiss="alert" aria-label="Close"></button>
+                  <h5>
+                    <svg class="bi flex-shrink-0 me-2" width="24" height="24" role="img" aria-label="Danger:">
+                      <use xlink:href="#exclamation-triangle-fill" />
+                    </svg>
+                    Pendaftaran Gagal!
+                  </h5>
+                  <ul type="square">
+                    <li>Password wajib diisi</li>
+                  </ul>
+                </div> -->
+                <p class="text-center"><b>Create your account</b></p>
+                <form name="daftar" action="" method="get">
+                  <div class="input-group mb-3">
+                    <input
+                      autofocus
+                      id="name"
+                      type="text"
+                      class="form-control"
+                      placeholder="Full Name"
+                      aria-label="Nama"
+                      aria-describedby="basic-addon2"
+                    />
+                    <span class="input-group-text" id="basic-addon2"><i class="bi bi-person-circle"></i></span>
+                  </div>
+
+                  <div class="input-group mb-3">
+                    <input
+                      id="email"
+                      type="email"
+                      class="form-control"
+                      placeholder="Email"
+                      aria-label="Email"
+                      aria-describedby="basic-addon2"
+                    />
+                    <span class="input-group-text" id="basic-addon2"><i class="bi bi-envelope-fill"></i></span>
+                  </div>
+
+                  <div class="input-group mb-3">
+                    <input
+                      id="pass"
+                      type="password"
+                      class="form-control"
+                      placeholder="Password"
+                      aria-label="Password"
+                      aria-describedby="basic-addon2"
+                    />
+                    <span class="input-group-text" id="basic-addon2"><i class="bi bi-lock-fill"></i></span>
+                  </div>
+
+                  <div class="input-group mb-3">
+                    <input
+                      id="check"
+                      type="password"
+                      class="form-control"
+                      placeholder="Retype Password"
+                      aria-label="Retype Password"
+                      aria-describedby="basic-addon2"
+                    />
+                    <span class="input-group-text" id="basic-addon2"><i class="bi bi-lock-fill"></i></span>
+                  </div>
+
+                  <div class="d-grid gap-2 col-12 mx-auto">
+                    <button class="btn btn-primary" type="submit">Sign Up</button>
+                  </div>
+                </form>
+                <a style="text-decoration: none" href="index.html" class="text-center">Login as Super Admin</a>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- JavaSCRIPT -->
+    <script>
+      let nama = document.getElementById("name");
+      let email = document.getElementById("email");
+      let pass = document.getElementById("pass");
+      let passcheck = document.getElementById("check");
+
+      nama.addEventListener("keyup", function (e) {
+        if (e.key == "Enter") {
+          email.focus();
+        }
+      });
+
+      email.addEventListener("keyup", function (e) {
+        if (e.key == "Enter") {
+          pass.focus();
+        }
+      });
+
+      pass.addEventListener("keyup", function (e) {
+        if (e.key == "Enter") {
+          passcheck.focus();
+        }
+      });
+    </script>
+
+    <script
+      src="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/js/bootstrap.bundle.min.js"
+      integrity="sha384-MrcW6ZMFYlzcLA8Nl+NtUVF0sA7MsXsP1UyJoMp4YLEuNSfAP+JcXn/tWtIaxVXM"
+      crossorigin="anonymous"
+    ></script>
+  </body>
+</html>
