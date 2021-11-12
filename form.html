@@ -21,7 +21,14 @@
     <link rel="stylesheet" href="form.css" />
 
     <!-- Font CSS -->
-    <link href="https://fonts.googleapis.com/css2?family=Darker+Grotesque&display=swap" rel="stylesheet"
+    <link href="https://fonts.googleapis.com/css2?family=Darker+Grotesque&display=swap" rel="stylesheet" />
+
+    <!-- JQuery -->
+    <script
+      src="https://code.jquery.com/jquery-3.4.1.min.js"
+      integrity="sha256-CSXorXvZcTkaix6Yvo6HppcZGetbYMGWSFlBw8HfCJo="
+      crossorigin="anonymous"
+    ></script>
   </head>
 
   <body>
@@ -62,7 +69,7 @@
                   </ul>
                 </div> -->
                 <p class="text-center"><b>Create your account</b></p>
-                <form name="daftar" action="" method="get">
+                <form name="daftar" action="" method="get" id="form-id">
                   <div class="input-group mb-3">
                     <input
                       autofocus
@@ -72,6 +79,7 @@
                       placeholder="Full Name"
                       aria-label="Nama"
                       aria-describedby="basic-addon2"
+                      required
                     />
                     <span class="input-group-text" id="basic-addon2"><i class="bi bi-person-circle"></i></span>
                   </div>
@@ -84,6 +92,7 @@
                       placeholder="Email"
                       aria-label="Email"
                       aria-describedby="basic-addon2"
+                      required
                     />
                     <span class="input-group-text" id="basic-addon2"><i class="bi bi-envelope-fill"></i></span>
                   </div>
@@ -96,6 +105,7 @@
                       placeholder="Password"
                       aria-label="Password"
                       aria-describedby="basic-addon2"
+                      required
                     />
                     <span class="input-group-text" id="basic-addon2"><i class="bi bi-lock-fill"></i></span>
                   </div>
@@ -108,12 +118,13 @@
                       placeholder="Retype Password"
                       aria-label="Retype Password"
                       aria-describedby="basic-addon2"
+                      required
                     />
                     <span class="input-group-text" id="basic-addon2"><i class="bi bi-lock-fill"></i></span>
                   </div>
 
                   <div class="d-grid gap-2 col-12 mx-auto">
-                    <button class="btn btn-primary" type="button">Sign Up</button>
+                    <button class="btn btn-primary" type="submit">Sign Up</button>
                   </div>
                 </form>
                 <a style="text-decoration: none" href="index.html" class="text-center">Login as Super Admin</a>
@@ -147,6 +158,16 @@
         if (e.key == "Enter") {
           passcheck.focus();
         }
+      });
+
+      $(window).ready(function () {
+        $("#form-id").on("keypress", function (event) {
+          var keyPressed = event.keyCode || event.which;
+          if (keyPressed === 13) {
+            event.preventDefault();
+            return false;
+          }
+        });
       });
     </script>
 
